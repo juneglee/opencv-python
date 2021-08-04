@@ -17,3 +17,17 @@
  
 - cv2.resizeWindow() : 윈도우 크기 재조정 
     - resizeWindow(winname, width, height)
+    
+### 이벤트 처리 함수 
+- 일반적으로 이벤트를 처리하기 위해 콜백(Callback) 함수를 사용한다 
+- openCV 에서 대표적으로 키보드 이벤트, 마우스 이벤트, 트랙바(trackbar) 이벤트를 처리하는 콜백 함수들이 있다 
+
+###### 키보드 이벤트 제어 
+- cv2.waitKey() : delay : ms(milisscond) 시간 만큼 키 입력을 대기 하고, 키 이벤트가 발생하면 해당 키 값 반환
+    - waitKey([,delay])
+    - delay <= 0 : 키이벤트 발생까지 무한대기, delay < 0 : 지연시간 동안 키 입력 대기, 지연시간 안에 키 이벤트 없으면 -1 반환 
+ 
+- cv2.waitKeyEX() : waitKey() 와 동일하지만, 전체 키 코드(full key code)를 반환, 화살표 키 등을 입력 받을 때 사용 
+    - waitKeyEX([,delay])
+    
+       
