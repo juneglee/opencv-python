@@ -30,4 +30,22 @@
 - cv2.waitKeyEX() : waitKey() 와 동일하지만, 전체 키 코드(full key code)를 반환, 화살표 키 등을 입력 받을 때 사용 
     - waitKeyEX([,delay])
     
-       
+###### 마우스 이벤트 제어
+- 마우스 이벤트는 openCV 가 제공하는 콜백 함수로 제어할 수 있다 
+- setMouseCallback() 함수를 통해서 시스템에 등록하고 시스템이 마우스 이벤트를 감지했을대 사용자가 만든 콜백 함수를 호출한다 
+ 
+- def setMouseCallback(windowName, onMouse, param=None) - 사용자가 정의한 마우스 콜백 함수에 등록
+- onMouse (event, x, y ,flags, param=None)
+    - event : 발생한 이벤트 종류
+    - x,y : 이벤트에 발생 시 마우스 포인트의 좌표 
+    - flags : 마우스버튼과 동시에 특수키([Shift], [Alt], [Ctrl])를 눌렀는지 여부
+    - param : 콜백함수로 전달하는 추가적인 사용자 정의 인수 
+
+###### 트랙바 이벤트 제어 
+- 트랙바는 일정한 범위에서 특정한 값을 선택할 때 사용하는 일종의 스크롤 바 혹은 슬라이더바를 말한다 
+
+- cv2.createTrackbar(trackbarname, winname, value count, onChange) : 트랙바를 생성한 후에 지정한 원도에 추가하는 함수
+    - onChange(pos) : 트랙바 슬라이더의 위치가 변경될 때마다 호출되는 콜백함수 
+        - pos : 트랙바 슬라이더의 위치
+- cv2.getTrackbarPos(trackbarname, winname) : 지정한 트랙바의 슬라이더 위치를 반환
+- cv2.ㄴetTrackbarPos(trackbarname, winname, pos) : 지정한 트랙바의 슬라이더 위치를 설정 
