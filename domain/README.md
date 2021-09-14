@@ -25,3 +25,5 @@
 
 * [11](11.filter_median.ipynb) - 미디언 필터링
 
+* [12](12.filter_gaussian.ipynb) - 가우시안 필터링
+
