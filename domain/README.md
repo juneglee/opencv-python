@@ -28,3 +28,5 @@
 * [12](12.filter_gaussian.ipynb) - 가우시안 필터링
 
 * [13](13.morphology_erode.ipynb) - 모폴로지 침식 연산
+
+* [14](14.morphology_dilate.ipynb) - 모폴로지 팽창 연산
