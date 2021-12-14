@@ -47,7 +47,7 @@ def detect_object(center, face):
     lip_center = center + (0, h * 0.3) # 입술 여역 중심 좌표 - 30%
     lip1 = lip_center - gap2    # 좌상단 평행이동
     lip2 = lip_center + gap2         # 우하단 평행이동
-    lip = define_roi(lip1, lip2-lip1) # 입술 영역 
+    lip = define_roi(lip1, lip2-lip1) # 입술 영역
 
     return [hair1, hair2, lip, hair]
 
