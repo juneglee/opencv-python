@@ -1,5 +1,5 @@
 import cv2
-from histogram import draw_ellipse
+from header.histogram import draw_ellipse
 
 # 문자열 출력 함수 - 그림자 효과
 def put_string(frame, text, pt, value=None, color=(120, 200, 90)) :
